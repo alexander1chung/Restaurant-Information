@@ -87,16 +87,17 @@ class WriteReview extends React.Component {
     }
 
     return (
-      <div className="modal_content-review">
-        <div className="x-button" onClick={this.props.updateReviewFormStatus}>&times;</div>
-        <h1>{this.props.name}</h1>
-        <div className="Write-Review-Star">
-          {stars}
+      <div className="modal-background">
+        <div className="modal_content-review">
+          <div className="x-button" onClick={this.props.updateReviewFormStatus}>&times;</div>
+          <h1>{this.props.name}</h1>
+          <div className="Write-Review-Star">
+            {stars}
+          </div>
+          <textarea onChange={this.handleinput} id="comment" placeholder="your comment here" />
+          <button onClick={this.handleSubmit} id="commentSubmit">Post Review</button>
         </div>
-        <textarea onChange={this.handleinput} id="comment" placeholder="your comment here" />
-        <button onClick={this.handleSubmit} id="commentSubmit">Post Review</button>
       </div>
-
     );
   }
 }
